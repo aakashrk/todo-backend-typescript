@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -x ts-node src/main.ts"
+    "start": "npm run dev && nodemon -x ts-node src/main.ts",
+    "dev" : "tsoa routes && tsoa swagger",
+    "eg" :"nodemon -x ts-node eg.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +18,9 @@
     "express": "^4.17.1",
     "mongodb": "^3.3.3",
     "mongoose": "^5.7.7",
+    "swagger-ui-express": "^4.1.2",
     "ts-node": "^8.4.1",
+    "tsoa": "^2.5.7",
     "typescript": "^3.6.4"
   },
   "devDependencies": {
